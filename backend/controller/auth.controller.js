@@ -21,7 +21,7 @@ export const signup = async(req, res, next) => {
     const hashedPassword = bcryptjs.hashSync(password, 10)
 
     const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`
-    const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`
+    const girlProfilePic =`https://avatar.iran.liara.run/public/girl?username=${username}`
 
     const newUser = new User({
         username,
@@ -70,7 +70,7 @@ export const login = async(req, res, next) => {
         _id: validUser._id,
         username: validUser.username, 
         email: validUser.email,
-        profilrPic: validUser.profilePic,
+        profilePic: validUser.profilePic,
       })
     } catch (error) {
       next(error)  
