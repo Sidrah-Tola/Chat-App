@@ -13,13 +13,11 @@ const Coversations = () => {
           <Conversation 
           key={conversation._id} 
           conversation={conversation} 
-          lastIndex={index === conversation.length - 1} 
+          lastIndex={index === conversation.length-1} 
           />
       ))}
 
-      {loading ? (
-        <span className='loading loading-spinner'></span>
-    ) : null} 
+      {loading ? <span className='loading loading-spinner'></span> : null} 
     </div>
   )
 }
