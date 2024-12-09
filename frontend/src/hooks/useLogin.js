@@ -8,6 +8,7 @@ const handleInputErrors = (email, password) =>{
         toast.error("Please fill all the Fields")
         return true
     }
+    
     return false
 }
 
